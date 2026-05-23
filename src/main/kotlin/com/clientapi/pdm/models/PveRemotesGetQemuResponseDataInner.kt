@@ -162,7 +162,7 @@ data class PveRemotesGetQemuResponseDataInner (
 
     /* Guest has serial device configured. */
     @Json(name = "serial")
-    val serial: kotlin.Boolean? = 0,
+    val serial: kotlin.Boolean? = false,
 
     /* The current configured tags, if any */
     @Json(name = "tags")
@@ -170,7 +170,7 @@ data class PveRemotesGetQemuResponseDataInner (
 
     /* Determines if the guest is a template. */
     @Json(name = "template")
-    val template: kotlin.Boolean? = 0,
+    val template: kotlin.Boolean? = false,
 
     /* Uptime in seconds. */
     @Json(name = "uptime")

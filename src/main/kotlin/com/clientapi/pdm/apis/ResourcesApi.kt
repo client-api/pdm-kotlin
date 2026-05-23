@@ -315,7 +315,7 @@ open class ResourcesApi(basePath: kotlin.String = defaultBasePath, client: Call.
      * Returns the subscription status of the remotes
      * Returns the subscription status of the remotes
      * @param maxAge Maximum age (in seconds) of cached remote subscription state. (optional, default to 86400L)
-     * @param verbose If true, includes subscription information per node (with enough privileges) (optional, default to 0)
+     * @param verbose If true, includes subscription information per node (with enough privileges) (optional, default to false)
      * @param view View name. (optional)
      * @return ResourcesGetSubscriptionResponse
      * @throws IllegalStateException If the request is not correctly configured
@@ -326,7 +326,7 @@ open class ResourcesApi(basePath: kotlin.String = defaultBasePath, client: Call.
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun resourcesGetSubscription(maxAge: kotlin.Long? = 86400L, verbose: kotlin.Boolean? = 0, view: kotlin.String? = null) : ResourcesGetSubscriptionResponse {
+    fun resourcesGetSubscription(maxAge: kotlin.Long? = 86400L, verbose: kotlin.Boolean? = false, view: kotlin.String? = null) : ResourcesGetSubscriptionResponse {
         val localVarResponse = resourcesGetSubscriptionWithHttpInfo(maxAge = maxAge, verbose = verbose, view = view)
 
         return when (localVarResponse.responseType) {
@@ -349,7 +349,7 @@ open class ResourcesApi(basePath: kotlin.String = defaultBasePath, client: Call.
      * Returns the subscription status of the remotes
      * Returns the subscription status of the remotes
      * @param maxAge Maximum age (in seconds) of cached remote subscription state. (optional, default to 86400L)
-     * @param verbose If true, includes subscription information per node (with enough privileges) (optional, default to 0)
+     * @param verbose If true, includes subscription information per node (with enough privileges) (optional, default to false)
      * @param view View name. (optional)
      * @return ApiResponse<ResourcesGetSubscriptionResponse?>
      * @throws IllegalStateException If the request is not correctly configured
@@ -369,7 +369,7 @@ open class ResourcesApi(basePath: kotlin.String = defaultBasePath, client: Call.
      * To obtain the request config of the operation resourcesGetSubscription
      *
      * @param maxAge Maximum age (in seconds) of cached remote subscription state. (optional, default to 86400L)
-     * @param verbose If true, includes subscription information per node (with enough privileges) (optional, default to 0)
+     * @param verbose If true, includes subscription information per node (with enough privileges) (optional, default to false)
      * @param view View name. (optional)
      * @return RequestConfig
      */

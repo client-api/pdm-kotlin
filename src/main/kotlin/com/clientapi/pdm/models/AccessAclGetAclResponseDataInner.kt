@@ -47,7 +47,7 @@ data class AccessAclGetAclResponseDataInner (
 
     /* Allow to propagate (inherit) permissions. */
     @Json(name = "propagate")
-    val propagate: kotlin.Boolean = 1,
+    val propagate: kotlin.Boolean = true,
 
     /* A role represented as a string. */
     @Json(name = "roleid")

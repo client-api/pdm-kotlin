@@ -69,7 +69,7 @@ data class PveRemotesGetClusterStatusResponseDataInner (
 
     /* [node] Indicates if this is the responding node. */
     @Json(name = "local")
-    val local: kotlin.Boolean? = 0,
+    val local: kotlin.Boolean? = false,
 
     /* [node] ID of the node from the corosync configuration. */
     @Json(name = "nodeid")
@@ -81,11 +81,11 @@ data class PveRemotesGetClusterStatusResponseDataInner (
 
     /* [node] Indicates if the node is online or offline. */
     @Json(name = "online")
-    val online: kotlin.Boolean? = 0,
+    val online: kotlin.Boolean? = false,
 
     /* [cluster] Indicates if there is a majority of nodes online to make decisions */
     @Json(name = "quorate")
-    val quorate: kotlin.Boolean? = 0,
+    val quorate: kotlin.Boolean? = false,
 
     /* [cluster] Current version of the corosync configuration file. */
     @Json(name = "version")

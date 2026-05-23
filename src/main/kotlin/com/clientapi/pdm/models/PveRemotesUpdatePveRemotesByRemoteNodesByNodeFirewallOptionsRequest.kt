@@ -68,7 +68,7 @@ data class PveRemotesUpdatePveRemotesByRemoteNodesByNodeFirewallOptionsRequest (
 
     /* Enable host firewall rules. */
     @Json(name = "enable")
-    val enable: kotlin.Boolean? = 1,
+    val enable: kotlin.Boolean? = true,
 
     /* Firewall log levels. */
     @Json(name = "log_level_forward")
@@ -84,15 +84,15 @@ data class PveRemotesUpdatePveRemotesByRemoteNodesByNodeFirewallOptionsRequest (
 
     /* Enable logging of conntrack information. */
     @Json(name = "log_nf_conntrack")
-    val logNfConntrack: kotlin.Boolean? = 0,
+    val logNfConntrack: kotlin.Boolean? = false,
 
     /* Enable NDP (Neighbor Discovery Protocol). */
     @Json(name = "ndp")
-    val ndp: kotlin.Boolean? = 1,
+    val ndp: kotlin.Boolean? = true,
 
     /* Allow invalid packets on connection tracking. */
     @Json(name = "nf_conntrack_allow_invalid")
-    val nfConntrackAllowInvalid: kotlin.Boolean? = 0,
+    val nfConntrackAllowInvalid: kotlin.Boolean? = false,
 
     /* Enable conntrack helpers for specific protocols. Supported protocols: amanda, ftp, irc, netbios-ns, pptp, sane, sip, snmp, tftp */
     @Json(name = "nf_conntrack_helpers")
@@ -112,15 +112,15 @@ data class PveRemotesUpdatePveRemotesByRemoteNodesByNodeFirewallOptionsRequest (
 
     /* Enable nftables based firewall (tech preview) */
     @Json(name = "nftables")
-    val nftables: kotlin.Boolean? = 0,
+    val nftables: kotlin.Boolean? = false,
 
     /* Enable SMURFS filter. */
     @Json(name = "nosmurfs")
-    val nosmurfs: kotlin.Boolean? = 0,
+    val nosmurfs: kotlin.Boolean? = false,
 
     /* Enable synflood protection */
     @Json(name = "protection_synflood")
-    val protectionSynflood: kotlin.Boolean? = 0,
+    val protectionSynflood: kotlin.Boolean? = false,
 
     /* Synflood protection rate burst by ip src. */
     @Json(name = "protection_synflood_burst")
@@ -140,7 +140,7 @@ data class PveRemotesUpdatePveRemotesByRemoteNodesByNodeFirewallOptionsRequest (
 
     /* Filter illegal combinations of TCP flags. */
     @Json(name = "tcpflags")
-    val tcpflags: kotlin.Boolean? = 0
+    val tcpflags: kotlin.Boolean? = false
 
 ) {
 

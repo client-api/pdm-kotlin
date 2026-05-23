@@ -41,11 +41,11 @@ data class PveRemotesGetMigrateResponseDataLocalDisksInner (
 
     /* True if the disk is a cdrom. */
     @Json(name = "cdrom")
-    val cdrom: kotlin.Boolean = 0,
+    val cdrom: kotlin.Boolean = false,
 
     /* True if the disk is unused. */
     @Json(name = "is_unused")
-    val isUnused: kotlin.Boolean = 0,
+    val isUnused: kotlin.Boolean = false,
 
     /* The size of the disk in bytes. */
     @Json(name = "size")

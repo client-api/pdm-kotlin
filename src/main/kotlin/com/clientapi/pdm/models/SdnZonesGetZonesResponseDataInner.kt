@@ -82,7 +82,7 @@ data class SdnZonesGetZonesResponseDataInner (
 
     /* Advertise IP prefixes (Type-5 routes) instead of MAC/IP pairs (Type-2 routes). EVPN zone only. */
     @Json(name = "advertise-subnets")
-    val advertiseSubnets: kotlin.Boolean? = 0,
+    val advertiseSubnets: kotlin.Boolean? = false,
 
     /* the bridge for which VLANs should be managed. VLAN & QinQ zone only. */
     @Json(name = "bridge")
@@ -90,7 +90,7 @@ data class SdnZonesGetZonesResponseDataInner (
 
     /* Disable auto mac learning. VLAN zone only. */
     @Json(name = "bridge-disable-mac-learning")
-    val bridgeDisableMacLearning: kotlin.Boolean? = 0,
+    val bridgeDisableMacLearning: kotlin.Boolean? = false,
 
     /* ID of the controller for this zone. EVPN zone only. */
     @Json(name = "controller")
@@ -106,7 +106,7 @@ data class SdnZonesGetZonesResponseDataInner (
 
     /* Suppress IPv4 ARP && IPv6 Neighbour Discovery messages. EVPN zone only. */
     @Json(name = "disable-arp-nd-suppression")
-    val disableArpNdSuppression: kotlin.Boolean? = 0,
+    val disableArpNdSuppression: kotlin.Boolean? = false,
 
     /* ID of the DNS server for this zone. */
     @Json(name = "dns")
@@ -122,7 +122,7 @@ data class SdnZonesGetZonesResponseDataInner (
 
     /* Create routes on the exit nodes, so they can connect to EVPN guests. EVPN zone only. */
     @Json(name = "exitnodes-local-routing")
-    val exitnodesLocalRouting: kotlin.Boolean? = 0,
+    val exitnodesLocalRouting: kotlin.Boolean? = false,
 
     /* Force traffic through this exitnode first. EVPN zone only. */
     @Json(name = "exitnodes-primary")

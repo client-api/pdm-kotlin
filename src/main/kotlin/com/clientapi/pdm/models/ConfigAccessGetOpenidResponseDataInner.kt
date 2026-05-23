@@ -66,7 +66,7 @@ data class ConfigAccessGetOpenidResponseDataInner (
 
     /* Automatically create users if they do not exist. */
     @Json(name = "autocreate")
-    val autocreate: kotlin.Boolean? = 0,
+    val autocreate: kotlin.Boolean? = false,
 
     /* OpenID Client Key */
     @Json(name = "client-key")

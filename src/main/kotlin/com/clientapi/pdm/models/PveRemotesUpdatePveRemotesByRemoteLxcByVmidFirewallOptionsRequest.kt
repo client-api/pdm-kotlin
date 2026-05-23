@@ -56,7 +56,7 @@ data class PveRemotesUpdatePveRemotesByRemoteLxcByVmidFirewallOptionsRequest (
 
     /* Enable DHCP. */
     @Json(name = "dhcp")
-    val dhcp: kotlin.Boolean? = 0,
+    val dhcp: kotlin.Boolean? = false,
 
     /* Prevent changes if current configuration file has a different digest. This can be used to prevent concurrent modifications. */
     @Json(name = "digest")
@@ -64,11 +64,11 @@ data class PveRemotesUpdatePveRemotesByRemoteLxcByVmidFirewallOptionsRequest (
 
     /* Enable/disable firewall rules. */
     @Json(name = "enable")
-    val enable: kotlin.Boolean? = 0,
+    val enable: kotlin.Boolean? = false,
 
     /* Enable default IP filters. This is equivalent to adding an empty ipfilter-net<id> ipset for every interface. Such ipsets implicitly contain sane default restrictions such as restricting IPv6 link local addresses to the one derived from the interface's MAC address. For containers the configured IP addresses will be implicitly added. */
     @Json(name = "ipfilter")
-    val ipfilter: kotlin.Boolean? = 0,
+    val ipfilter: kotlin.Boolean? = false,
 
     /* Firewall log levels. */
     @Json(name = "log_level_in")
@@ -80,11 +80,11 @@ data class PveRemotesUpdatePveRemotesByRemoteLxcByVmidFirewallOptionsRequest (
 
     /* Enable/disable MAC address filter. */
     @Json(name = "macfilter")
-    val macfilter: kotlin.Boolean? = 1,
+    val macfilter: kotlin.Boolean? = true,
 
     /* Enable NDP (Neighbor Discovery Protocol). */
     @Json(name = "ndp")
-    val ndp: kotlin.Boolean? = 1,
+    val ndp: kotlin.Boolean? = true,
 
     /* Node name (or 'localhost') */
     @Json(name = "node")
@@ -100,7 +100,7 @@ data class PveRemotesUpdatePveRemotesByRemoteLxcByVmidFirewallOptionsRequest (
 
     /* Allow sending Router Advertisement. */
     @Json(name = "radv")
-    val radv: kotlin.Boolean? = 0
+    val radv: kotlin.Boolean? = false
 
 ) {
 

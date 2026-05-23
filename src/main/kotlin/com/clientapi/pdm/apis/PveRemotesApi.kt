@@ -1667,7 +1667,7 @@ open class PveRemotesApi(basePath: kotlin.String = defaultBasePath, client: Call
      * Read a task log.
      * @param remote Remote ID.
      * @param upid A remote UPID
-     * @param download Whether the tasklog file should be downloaded. This parameter can&#39;t be used in conjunction with other parameters (optional, default to 0)
+     * @param download Whether the tasklog file should be downloaded. This parameter can&#39;t be used in conjunction with other parameters (optional, default to false)
      * @param limit The amount of lines to read from the tasklog. Setting this parameter to 0 will return all lines until the end of the file. (optional, default to 50L)
      * @param start Start at this line when reading the tasklog (optional, default to 0L)
      * @return PveRemotesGetLogResponse
@@ -1679,7 +1679,7 @@ open class PveRemotesApi(basePath: kotlin.String = defaultBasePath, client: Call
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun pveRemotesGetLog(remote: kotlin.String, upid: kotlin.String, download: kotlin.Boolean? = 0, limit: kotlin.Long? = 50L, start: kotlin.Long? = 0L) : PveRemotesGetLogResponse {
+    fun pveRemotesGetLog(remote: kotlin.String, upid: kotlin.String, download: kotlin.Boolean? = false, limit: kotlin.Long? = 50L, start: kotlin.Long? = 0L) : PveRemotesGetLogResponse {
         val localVarResponse = pveRemotesGetLogWithHttpInfo(remote = remote, upid = upid, download = download, limit = limit, start = start)
 
         return when (localVarResponse.responseType) {
@@ -1703,7 +1703,7 @@ open class PveRemotesApi(basePath: kotlin.String = defaultBasePath, client: Call
      * Read a task log.
      * @param remote Remote ID.
      * @param upid A remote UPID
-     * @param download Whether the tasklog file should be downloaded. This parameter can&#39;t be used in conjunction with other parameters (optional, default to 0)
+     * @param download Whether the tasklog file should be downloaded. This parameter can&#39;t be used in conjunction with other parameters (optional, default to false)
      * @param limit The amount of lines to read from the tasklog. Setting this parameter to 0 will return all lines until the end of the file. (optional, default to 50L)
      * @param start Start at this line when reading the tasklog (optional, default to 0L)
      * @return ApiResponse<PveRemotesGetLogResponse?>
@@ -1725,7 +1725,7 @@ open class PveRemotesApi(basePath: kotlin.String = defaultBasePath, client: Call
      *
      * @param remote Remote ID.
      * @param upid A remote UPID
-     * @param download Whether the tasklog file should be downloaded. This parameter can&#39;t be used in conjunction with other parameters (optional, default to 0)
+     * @param download Whether the tasklog file should be downloaded. This parameter can&#39;t be used in conjunction with other parameters (optional, default to false)
      * @param limit The amount of lines to read from the tasklog. Setting this parameter to 0 will return all lines until the end of the file. (optional, default to 50L)
      * @param start Start at this line when reading the tasklog (optional, default to 0L)
      * @return RequestConfig
@@ -4486,7 +4486,7 @@ open class PveRemotesApi(basePath: kotlin.String = defaultBasePath, client: Call
      * Get the status of a task from a Proxmox VE instance.
      * @param remote Remote ID.
      * @param upid A remote UPID
-     * @param wait wait for the task to finish before returning its result (optional, default to 0)
+     * @param wait wait for the task to finish before returning its result (optional, default to false)
      * @return PveRemotesGetPveRemotesByRemoteTasksByUpidStatusResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -4496,7 +4496,7 @@ open class PveRemotesApi(basePath: kotlin.String = defaultBasePath, client: Call
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun pveRemotesGetPveRemotesByRemoteTasksByUpidStatus(remote: kotlin.String, upid: kotlin.String, wait: kotlin.Boolean? = 0) : PveRemotesGetPveRemotesByRemoteTasksByUpidStatusResponse {
+    fun pveRemotesGetPveRemotesByRemoteTasksByUpidStatus(remote: kotlin.String, upid: kotlin.String, wait: kotlin.Boolean? = false) : PveRemotesGetPveRemotesByRemoteTasksByUpidStatusResponse {
         val localVarResponse = pveRemotesGetPveRemotesByRemoteTasksByUpidStatusWithHttpInfo(remote = remote, upid = upid, wait = wait)
 
         return when (localVarResponse.responseType) {
@@ -4520,7 +4520,7 @@ open class PveRemotesApi(basePath: kotlin.String = defaultBasePath, client: Call
      * Get the status of a task from a Proxmox VE instance.
      * @param remote Remote ID.
      * @param upid A remote UPID
-     * @param wait wait for the task to finish before returning its result (optional, default to 0)
+     * @param wait wait for the task to finish before returning its result (optional, default to false)
      * @return ApiResponse<PveRemotesGetPveRemotesByRemoteTasksByUpidStatusResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -4540,7 +4540,7 @@ open class PveRemotesApi(basePath: kotlin.String = defaultBasePath, client: Call
      *
      * @param remote Remote ID.
      * @param upid A remote UPID
-     * @param wait wait for the task to finish before returning its result (optional, default to 0)
+     * @param wait wait for the task to finish before returning its result (optional, default to false)
      * @return RequestConfig
      */
     fun pveRemotesGetPveRemotesByRemoteTasksByUpidStatusRequestConfig(remote: kotlin.String, upid: kotlin.String, wait: kotlin.Boolean?) : RequestConfig<Unit> {

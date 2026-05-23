@@ -4089,7 +4089,7 @@ data class PveRemotesGetConfigResponseData (
 
     /* Attach a console device (/dev/console) to the container. */
     @Json(name = "console")
-    val console: kotlin.Boolean? = 1,
+    val console: kotlin.Boolean? = true,
 
     /* The number of cores assigned to the container. A container can use all available cores by default. */
     @Json(name = "cores")
@@ -4105,7 +4105,7 @@ data class PveRemotesGetConfigResponseData (
 
     /* Try to be more verbose. For now this only enables debug log-level on start. */
     @Json(name = "debug")
-    val debug: kotlin.Boolean? = 0,
+    val debug: kotlin.Boolean? = false,
 
     /* Description for the Container. Shown in the web-interface CT's summary. This is saved as comment inside the configuration file. */
     @Json(name = "description")
@@ -4149,7 +4149,7 @@ data class PveRemotesGetConfigResponseData (
 
     /* Specifies whether a container will be started during system bootup. */
     @Json(name = "onboot")
-    val onboot: kotlin.Boolean? = 0,
+    val onboot: kotlin.Boolean? = false,
 
     /* OS type. This is used to setup configuration inside the container, and corresponds to lxc setup scripts in /usr/share/lxc/config/<ostype>.common.conf. Value 'unmanaged' can be used to skip and OS specific setup. */
     @Json(name = "ostype")
@@ -4157,7 +4157,7 @@ data class PveRemotesGetConfigResponseData (
 
     /* Sets the protection flag of the container. This will prevent the CT or CT's disk remove/update operation. */
     @Json(name = "protection")
-    val protection: kotlin.Boolean? = 0,
+    val protection: kotlin.Boolean? = false,
 
     /* Use volume as container root. */
     @Json(name = "rootfs")
@@ -4181,7 +4181,7 @@ data class PveRemotesGetConfigResponseData (
 
     /* Enable/disable Template. */
     @Json(name = "template")
-    val template: kotlin.Boolean? = 0,
+    val template: kotlin.Boolean? = false,
 
     /* Time zone to use in the container. If option isn't set, then nothing will be done. Can be set to 'host' to match the host time zone, or an arbitrary time zone option from /usr/share/zoneinfo/zone.tab */
     @Json(name = "timezone")
@@ -4193,7 +4193,7 @@ data class PveRemotesGetConfigResponseData (
 
     /* Makes the container run as unprivileged user. For creation, the default is 1. For restore, the default is the value from the backup. (Should not be modified manually.) */
     @Json(name = "unprivileged")
-    val unprivileged: kotlin.Boolean? = 0
+    val unprivileged: kotlin.Boolean? = false
 
 ) {
 

@@ -64,7 +64,7 @@ data class PveRemotesGetMigrateResponseData (
 
     /* Determines if the VM is running. */
     @Json(name = "running")
-    val running: kotlin.Boolean = 0,
+    val running: kotlin.Boolean = false,
 
     /* List of nodes allowed for migration. */
     @Json(name = "allowed_nodes")
@@ -76,7 +76,7 @@ data class PveRemotesGetMigrateResponseData (
 
     /* Whether the VM host supports migrating additional VM state, such as conntrack entries. */
     @Json(name = "has-dbus-vmstate")
-    val hasDbusVmstate: kotlin.Boolean? = 0,
+    val hasDbusVmstate: kotlin.Boolean? = false,
 
     @Json(name = "not_allowed_nodes")
     val notAllowedNodes: PveRemotesGetMigrateResponseDataNotAllowedNodes? = null

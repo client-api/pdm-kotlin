@@ -71,7 +71,7 @@ data class SdnVnetsGetVnetsResponseDataInner (
 
     /* If true, sets the isolated property for all interfaces on the bridge of this VNet. */
     @Json(name = "isolate-ports")
-    val isolatePorts: kotlin.Boolean? = 0,
+    val isolatePorts: kotlin.Boolean? = false,
 
     @Json(name = "pending")
     val pending: SdnVnetsGetVnetsResponseDataInnerPending? = null,
@@ -86,7 +86,7 @@ data class SdnVnetsGetVnetsResponseDataInner (
 
     /* Allow VLANs to pass through this VNet. */
     @Json(name = "vlanaware")
-    val vlanaware: kotlin.Boolean? = 0,
+    val vlanaware: kotlin.Boolean? = false,
 
     /* Name of the zone this VNet belongs to. */
     @Json(name = "zone")

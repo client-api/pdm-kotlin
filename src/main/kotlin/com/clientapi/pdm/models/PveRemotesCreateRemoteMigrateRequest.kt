@@ -64,7 +64,7 @@ data class PveRemotesCreateRemoteMigrateRequest (
 
     /* Delete the original VM and related data after successful migration. */
     @Json(name = "delete")
-    val delete: kotlin.Boolean? = 0,
+    val delete: kotlin.Boolean? = false,
 
     /* Node name (or 'localhost') */
     @Json(name = "node")
@@ -72,7 +72,7 @@ data class PveRemotesCreateRemoteMigrateRequest (
 
     /* Perform an online migration if the vm is running. */
     @Json(name = "online")
-    val online: kotlin.Boolean? = 0,
+    val online: kotlin.Boolean? = false,
 
     /* Perform a restart-migration. */
     @Json(name = "restart")

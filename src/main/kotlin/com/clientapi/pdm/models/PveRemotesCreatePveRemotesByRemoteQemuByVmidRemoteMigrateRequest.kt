@@ -62,7 +62,7 @@ data class PveRemotesCreatePveRemotesByRemoteQemuByVmidRemoteMigrateRequest (
 
     /* Delete the original VM and related data after successful migration. */
     @Json(name = "delete")
-    val delete: kotlin.Boolean? = 0,
+    val delete: kotlin.Boolean? = false,
 
     /* Node name (or 'localhost') */
     @Json(name = "node")
@@ -70,7 +70,7 @@ data class PveRemotesCreatePveRemotesByRemoteQemuByVmidRemoteMigrateRequest (
 
     /* Perform an online migration if the vm is running. */
     @Json(name = "online")
-    val online: kotlin.Boolean? = 0,
+    val online: kotlin.Boolean? = false,
 
     /* The target endpoint to use for the connection. */
     @Json(name = "target-endpoint")

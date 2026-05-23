@@ -99,7 +99,7 @@ data class PveRemotesGetNetworkResponseDataInner (
 
     /* Set to true if the interface is active. */
     @Json(name = "active")
-    val active: kotlin.Boolean? = 0,
+    val active: kotlin.Boolean? = false,
 
     /* IP address. */
     @Json(name = "address")
@@ -111,7 +111,7 @@ data class PveRemotesGetNetworkResponseDataInner (
 
     /* Automatically start interface on boot. */
     @Json(name = "autostart")
-    val autostart: kotlin.Boolean? = 0,
+    val autostart: kotlin.Boolean? = false,
 
     /* Specify the primary interface for active-backup bond. */
     @Json(name = "bond-primary")
@@ -131,19 +131,19 @@ data class PveRemotesGetNetworkResponseDataInner (
 
     /* Bridge port ARP/ND suppress flag. */
     @Json(name = "bridge-arp-nd-suppress")
-    val bridgeArpNdSuppress: kotlin.Boolean? = 0,
+    val bridgeArpNdSuppress: kotlin.Boolean? = false,
 
     /* Bridge port learning flag. */
     @Json(name = "bridge-learning")
-    val bridgeLearning: kotlin.Boolean? = 0,
+    val bridgeLearning: kotlin.Boolean? = false,
 
     /* Bridge port multicast flood flag. */
     @Json(name = "bridge-multicast-flood")
-    val bridgeMulticastFlood: kotlin.Boolean? = 0,
+    val bridgeMulticastFlood: kotlin.Boolean? = false,
 
     /* Bridge port unicast flood flag. */
     @Json(name = "bridge-unicast-flood")
-    val bridgeUnicastFlood: kotlin.Boolean? = 0,
+    val bridgeUnicastFlood: kotlin.Boolean? = false,
 
     /* Specify the interfaces you want to add to your bridge. */
     @Json(name = "bridge_ports")
@@ -155,7 +155,7 @@ data class PveRemotesGetNetworkResponseDataInner (
 
     /* Enable bridge vlan support. */
     @Json(name = "bridge_vlan_aware")
-    val bridgeVlanAware: kotlin.Boolean? = 0,
+    val bridgeVlanAware: kotlin.Boolean? = false,
 
     /* IPv4 CIDR. */
     @Json(name = "cidr")
@@ -175,7 +175,7 @@ data class PveRemotesGetNetworkResponseDataInner (
 
     /* Set to true if the interface physically exists. */
     @Json(name = "exists")
-    val exists: kotlin.Boolean? = 0,
+    val exists: kotlin.Boolean? = false,
 
     /* The network families. */
     @Json(name = "families")

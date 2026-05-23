@@ -83,7 +83,7 @@ data class PveRemotesGetPveRemotesByRemoteQemuByVmidStatusResponseData (
 
     /* QEMU Guest Agent is enabled in config. */
     @Json(name = "agent")
-    val agent: kotlin.Boolean? = 0,
+    val agent: kotlin.Boolean? = false,
 
     /* Enable a specific clipboard. If not set, depending on the display type the SPICE one will be added. Migration with VNC clipboard is not yet supported! */
     @Json(name = "clipboard")
@@ -179,11 +179,11 @@ data class PveRemotesGetPveRemotesByRemoteQemuByVmidStatusResponseData (
 
     /* Guest has serial device configured. */
     @Json(name = "serial")
-    val serial: kotlin.Boolean? = 0,
+    val serial: kotlin.Boolean? = false,
 
     /* QEMU VGA configuration supports spice. */
     @Json(name = "spice")
-    val spice: kotlin.Boolean? = 0,
+    val spice: kotlin.Boolean? = false,
 
     /* The current configured tags, if any */
     @Json(name = "tags")
@@ -191,7 +191,7 @@ data class PveRemotesGetPveRemotesByRemoteQemuByVmidStatusResponseData (
 
     /* Determines if the guest is a template. */
     @Json(name = "template")
-    val template: kotlin.Boolean? = 0,
+    val template: kotlin.Boolean? = false,
 
     /* Uptime in seconds. */
     @Json(name = "uptime")

@@ -56,7 +56,7 @@ data class AccessAclUpdateAclRequest (
 
     /* Remove permissions (instead of adding it). */
     @Json(name = "delete")
-    val delete: kotlin.Boolean? = 0,
+    val delete: kotlin.Boolean? = false,
 
     /* Prevent changes if current configuration file has different SHA256 digest. This can be used to prevent concurrent modifications. */
     @Json(name = "digest")
@@ -68,7 +68,7 @@ data class AccessAclUpdateAclRequest (
 
     /* Allow to propagate (inherit) permissions. */
     @Json(name = "propagate")
-    val propagate: kotlin.Boolean? = 1
+    val propagate: kotlin.Boolean? = true
 
 ) {
 

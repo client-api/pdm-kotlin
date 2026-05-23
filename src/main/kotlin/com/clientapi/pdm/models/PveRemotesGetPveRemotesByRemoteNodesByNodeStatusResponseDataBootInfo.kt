@@ -44,7 +44,7 @@ data class PveRemotesGetPveRemotesByRemoteNodesByNodeStatusResponseDataBootInfo 
 
     /* System is booted in secure mode, only applicable for the \"efi\" mode. */
     @Json(name = "secureboot")
-    val secureboot: kotlin.Boolean? = 0
+    val secureboot: kotlin.Boolean? = false
 
 ) {
 

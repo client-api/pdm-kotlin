@@ -2314,7 +2314,7 @@ data class PveRemotesGetPveRemotesByRemoteQemuByVmidConfigResponseData (
 
     /* Enable/disable ACPI. */
     @Json(name = "acpi")
-    val acpi: kotlin.Boolean? = 1,
+    val acpi: kotlin.Boolean? = true,
 
     /* List of host cores used to execute guest processes, for example: 0,5,8-11 */
     @Json(name = "affinity")
@@ -2326,7 +2326,7 @@ data class PveRemotesGetPveRemotesByRemoteQemuByVmidConfigResponseData (
 
     /* Allow memory pages of this guest to be merged via KSM (Kernel Samepage Merging). */
     @Json(name = "allow-ksm")
-    val allowKsm: kotlin.Boolean? = 1,
+    val allowKsm: kotlin.Boolean? = true,
 
     /* Secure Encrypted Virtualization (SEV) features by AMD CPUs */
     @Json(name = "amd-sev")
@@ -2346,7 +2346,7 @@ data class PveRemotesGetPveRemotesByRemoteQemuByVmidConfigResponseData (
 
     /* Automatic restart after crash (currently ignored). */
     @Json(name = "autostart")
-    val autostart: kotlin.Boolean? = 0,
+    val autostart: kotlin.Boolean? = false,
 
     /* Amount of target RAM for the VM in MiB. Using zero disables the ballon driver. */
     @Json(name = "balloon")
@@ -2382,7 +2382,7 @@ data class PveRemotesGetPveRemotesByRemoteQemuByVmidConfigResponseData (
 
     /* cloud-init: do an automatic package upgrade after the first boot. */
     @Json(name = "ciupgrade")
-    val ciupgrade: kotlin.Boolean? = 1,
+    val ciupgrade: kotlin.Boolean? = true,
 
     /* cloud-init: User name to change ssh keys and password for instead of the image's configured default user. */
     @Json(name = "ciuser")
@@ -2414,7 +2414,7 @@ data class PveRemotesGetPveRemotesByRemoteQemuByVmidConfigResponseData (
 
     /* Freeze CPU at startup (use 'c' monitor command to start execution). */
     @Json(name = "freeze")
-    val freeze: kotlin.Boolean? = 0,
+    val freeze: kotlin.Boolean? = false,
 
     /* Script that will be executed during various steps in the vms lifetime. */
     @Json(name = "hookscript")
@@ -2438,7 +2438,7 @@ data class PveRemotesGetPveRemotesByRemoteQemuByVmidConfigResponseData (
 
     /* Use together with hugepages. If enabled, hugepages will not not be deleted after VM shutdown and can be used for subsequent starts. */
     @Json(name = "keephugepages")
-    val keephugepages: kotlin.Boolean? = 0,
+    val keephugepages: kotlin.Boolean? = false,
 
     /* Keyboard layout for VNC server. This option is generally not required and is often better handled from within the guest OS. */
     @Json(name = "keyboard")
@@ -2446,11 +2446,11 @@ data class PveRemotesGetPveRemotesByRemoteQemuByVmidConfigResponseData (
 
     /* Enable/disable KVM hardware virtualization. */
     @Json(name = "kvm")
-    val kvm: kotlin.Boolean? = 1,
+    val kvm: kotlin.Boolean? = true,
 
     /* Set the real time clock (RTC) to local time. This is enabled by default if the `ostype` indicates a Microsoft Windows OS. */
     @Json(name = "localtime")
-    val localtime: kotlin.Boolean? = 0,
+    val localtime: kotlin.Boolean? = false,
 
     /* Lock/unlock the VM. */
     @Json(name = "lock")
@@ -2486,11 +2486,11 @@ data class PveRemotesGetPveRemotesByRemoteQemuByVmidConfigResponseData (
 
     /* Enable/disable NUMA. */
     @Json(name = "numa")
-    val numa: kotlin.Boolean? = 0,
+    val numa: kotlin.Boolean? = false,
 
     /* Specifies whether a VM will be started during system bootup. */
     @Json(name = "onboot")
-    val onboot: kotlin.Boolean? = 0,
+    val onboot: kotlin.Boolean? = false,
 
     /* Specify guest operating system. */
     @Json(name = "ostype")
@@ -2502,11 +2502,11 @@ data class PveRemotesGetPveRemotesByRemoteQemuByVmidConfigResponseData (
 
     /* Sets the protection flag of the VM. This will disable the remove VM and remove disk operations. */
     @Json(name = "protection")
-    val protection: kotlin.Boolean? = 0,
+    val protection: kotlin.Boolean? = false,
 
     /* Allow reboot. If set to '0' the VM exit on reboot. */
     @Json(name = "reboot")
-    val reboot: kotlin.Boolean? = 1,
+    val reboot: kotlin.Boolean? = true,
 
     /* Configure a VirtIO-based Random Number Generator. */
     @Json(name = "rng0")
@@ -2570,7 +2570,7 @@ data class PveRemotesGetPveRemotesByRemoteQemuByVmidConfigResponseData (
 
     /* Enable/disable the USB tablet device. */
     @Json(name = "tablet")
-    val tablet: kotlin.Boolean? = 1,
+    val tablet: kotlin.Boolean? = true,
 
     /* Tags of the VM. This is only meta information. */
     @Json(name = "tags")
@@ -2578,11 +2578,11 @@ data class PveRemotesGetPveRemotesByRemoteQemuByVmidConfigResponseData (
 
     /* Enable/disable time drift fix. */
     @Json(name = "tdf")
-    val tdf: kotlin.Boolean? = 0,
+    val tdf: kotlin.Boolean? = false,
 
     /* Enable/disable Template. */
     @Json(name = "template")
-    val template: kotlin.Boolean? = 0,
+    val template: kotlin.Boolean? = false,
 
     /* Configure a Disk for storing TPM state. The format is fixed to 'raw'. */
     @Json(name = "tpmstate0")

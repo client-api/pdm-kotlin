@@ -54,7 +54,7 @@ data class PveRemotesGetPveRemotesByRemoteNodesByNodeStorageByStorageStatusRespo
 
     /* Set when storage is accessible. */
     @Json(name = "active")
-    val active: kotlin.Boolean? = 0,
+    val active: kotlin.Boolean? = false,
 
     /* Available storage space in bytes. */
     @Json(name = "avail")
@@ -62,11 +62,11 @@ data class PveRemotesGetPveRemotesByRemoteNodesByNodeStorageByStorageStatusRespo
 
     /* Set when storage is enabled (not disabled). */
     @Json(name = "enabled")
-    val enabled: kotlin.Boolean? = 0,
+    val enabled: kotlin.Boolean? = false,
 
     /* Shared flag from storage configuration. */
     @Json(name = "shared")
-    val shared: kotlin.Boolean? = 0,
+    val shared: kotlin.Boolean? = false,
 
     /* Total storage space in bytes. */
     @Json(name = "total")

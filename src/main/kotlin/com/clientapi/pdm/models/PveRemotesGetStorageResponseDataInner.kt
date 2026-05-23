@@ -63,7 +63,7 @@ data class PveRemotesGetStorageResponseDataInner (
 
     /* Set when storage is accessible. */
     @Json(name = "active")
-    val active: kotlin.Boolean? = 0,
+    val active: kotlin.Boolean? = false,
 
     /* Available storage space in bytes. */
     @Json(name = "avail")
@@ -71,18 +71,18 @@ data class PveRemotesGetStorageResponseDataInner (
 
     /* Set when storage is enabled (not disabled). */
     @Json(name = "enabled")
-    val enabled: kotlin.Boolean? = 0,
+    val enabled: kotlin.Boolean? = false,
 
     @Json(name = "formats")
     val formats: PveRemotesGetStorageResponseDataInnerFormats? = null,
 
     /* Instead of creating new volumes, one must select one that is already existing. Only included if 'format' parameter is set. */
     @Json(name = "select_existing")
-    val selectExisting: kotlin.Boolean? = 0,
+    val selectExisting: kotlin.Boolean? = false,
 
     /* Shared flag from storage configuration. */
     @Json(name = "shared")
-    val shared: kotlin.Boolean? = 0,
+    val shared: kotlin.Boolean? = false,
 
     /* Total storage space in bytes. */
     @Json(name = "total")

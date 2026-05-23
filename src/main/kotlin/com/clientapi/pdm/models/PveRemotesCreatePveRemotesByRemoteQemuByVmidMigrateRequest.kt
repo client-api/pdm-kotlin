@@ -55,7 +55,7 @@ data class PveRemotesCreatePveRemotesByRemoteQemuByVmidMigrateRequest (
 
     /* Allow to migrate VMs with local devices. */
     @Json(name = "force")
-    val force: kotlin.Boolean? = 0,
+    val force: kotlin.Boolean? = false,
 
     /* CIDR of the (sub) network that is used for migration. */
     @Json(name = "migration-network")

@@ -150,7 +150,7 @@ data class PveRemotesGetPveRemotesByRemoteLxcByVmidStatusResponseData (
 
     /* Determines if the guest is a template. */
     @Json(name = "template")
-    val template: kotlin.Boolean? = 0,
+    val template: kotlin.Boolean? = false,
 
     /* Uptime in seconds. */
     @Json(name = "uptime")

@@ -51,11 +51,11 @@ data class SdnGetControllersResponseDataInnerPending (
 
     /* Consider different AS paths of equal length for multipath computation. BGP only. */
     @Json(name = "bgp-multipath-as-relax")
-    val bgpMultipathAsRelax: kotlin.Boolean? = 0,
+    val bgpMultipathAsRelax: kotlin.Boolean? = false,
 
     /* Enable eBGP (remote-as external). BGP only. */
     @Json(name = "ebgp")
-    val ebgp: kotlin.Boolean? = 0,
+    val ebgp: kotlin.Boolean? = false,
 
     /* Set maximum amount of hops for eBGP peers. Needs ebgp set to 1. BGP only. */
     @Json(name = "ebgp-multihop")

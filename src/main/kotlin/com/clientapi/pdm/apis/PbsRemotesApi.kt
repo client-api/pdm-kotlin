@@ -549,7 +549,7 @@ open class PbsRemotesApi(basePath: kotlin.String = defaultBasePath, client: Call
      * Read a task log.
      * @param remote Remote ID.
      * @param upid A remote UPID
-     * @param download Whether the tasklog file should be downloaded. This parameter can&#39;t be used in conjunction with other parameters (optional, default to 0)
+     * @param download Whether the tasklog file should be downloaded. This parameter can&#39;t be used in conjunction with other parameters (optional, default to false)
      * @param limit The amount of lines to read from the tasklog. Setting this parameter to 0 will return all lines until the end of the file. (optional, default to 50L)
      * @param start Start at this line when reading the tasklog (optional, default to 0L)
      * @return PbsRemotesGetLogResponse
@@ -561,7 +561,7 @@ open class PbsRemotesApi(basePath: kotlin.String = defaultBasePath, client: Call
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun pbsRemotesGetLog(remote: kotlin.String, upid: kotlin.String, download: kotlin.Boolean? = 0, limit: kotlin.Long? = 50L, start: kotlin.Long? = 0L) : PbsRemotesGetLogResponse {
+    fun pbsRemotesGetLog(remote: kotlin.String, upid: kotlin.String, download: kotlin.Boolean? = false, limit: kotlin.Long? = 50L, start: kotlin.Long? = 0L) : PbsRemotesGetLogResponse {
         val localVarResponse = pbsRemotesGetLogWithHttpInfo(remote = remote, upid = upid, download = download, limit = limit, start = start)
 
         return when (localVarResponse.responseType) {
@@ -585,7 +585,7 @@ open class PbsRemotesApi(basePath: kotlin.String = defaultBasePath, client: Call
      * Read a task log.
      * @param remote Remote ID.
      * @param upid A remote UPID
-     * @param download Whether the tasklog file should be downloaded. This parameter can&#39;t be used in conjunction with other parameters (optional, default to 0)
+     * @param download Whether the tasklog file should be downloaded. This parameter can&#39;t be used in conjunction with other parameters (optional, default to false)
      * @param limit The amount of lines to read from the tasklog. Setting this parameter to 0 will return all lines until the end of the file. (optional, default to 50L)
      * @param start Start at this line when reading the tasklog (optional, default to 0L)
      * @return ApiResponse<PbsRemotesGetLogResponse?>
@@ -607,7 +607,7 @@ open class PbsRemotesApi(basePath: kotlin.String = defaultBasePath, client: Call
      *
      * @param remote Remote ID.
      * @param upid A remote UPID
-     * @param download Whether the tasklog file should be downloaded. This parameter can&#39;t be used in conjunction with other parameters (optional, default to 0)
+     * @param download Whether the tasklog file should be downloaded. This parameter can&#39;t be used in conjunction with other parameters (optional, default to false)
      * @param limit The amount of lines to read from the tasklog. Setting this parameter to 0 will return all lines until the end of the file. (optional, default to 50L)
      * @param start Start at this line when reading the tasklog (optional, default to 0L)
      * @return RequestConfig
@@ -1119,7 +1119,7 @@ open class PbsRemotesApi(basePath: kotlin.String = defaultBasePath, client: Call
      * Get the status of a task from a Proxmox VE instance.
      * @param remote Remote ID.
      * @param upid A remote UPID
-     * @param wait wait for the task to finish before returning its result (optional, default to 0)
+     * @param wait wait for the task to finish before returning its result (optional, default to false)
      * @return PbsRemotesGetPbsRemotesByRemoteTasksByUpidStatusResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -1129,7 +1129,7 @@ open class PbsRemotesApi(basePath: kotlin.String = defaultBasePath, client: Call
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun pbsRemotesGetPbsRemotesByRemoteTasksByUpidStatus(remote: kotlin.String, upid: kotlin.String, wait: kotlin.Boolean? = 0) : PbsRemotesGetPbsRemotesByRemoteTasksByUpidStatusResponse {
+    fun pbsRemotesGetPbsRemotesByRemoteTasksByUpidStatus(remote: kotlin.String, upid: kotlin.String, wait: kotlin.Boolean? = false) : PbsRemotesGetPbsRemotesByRemoteTasksByUpidStatusResponse {
         val localVarResponse = pbsRemotesGetPbsRemotesByRemoteTasksByUpidStatusWithHttpInfo(remote = remote, upid = upid, wait = wait)
 
         return when (localVarResponse.responseType) {
@@ -1153,7 +1153,7 @@ open class PbsRemotesApi(basePath: kotlin.String = defaultBasePath, client: Call
      * Get the status of a task from a Proxmox VE instance.
      * @param remote Remote ID.
      * @param upid A remote UPID
-     * @param wait wait for the task to finish before returning its result (optional, default to 0)
+     * @param wait wait for the task to finish before returning its result (optional, default to false)
      * @return ApiResponse<PbsRemotesGetPbsRemotesByRemoteTasksByUpidStatusResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -1173,7 +1173,7 @@ open class PbsRemotesApi(basePath: kotlin.String = defaultBasePath, client: Call
      *
      * @param remote Remote ID.
      * @param upid A remote UPID
-     * @param wait wait for the task to finish before returning its result (optional, default to 0)
+     * @param wait wait for the task to finish before returning its result (optional, default to false)
      * @return RequestConfig
      */
     fun pbsRemotesGetPbsRemotesByRemoteTasksByUpidStatusRequestConfig(remote: kotlin.String, upid: kotlin.String, wait: kotlin.Boolean?) : RequestConfig<Unit> {

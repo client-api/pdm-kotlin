@@ -60,8 +60,8 @@ open class AccessAclApi(basePath: kotlin.String = defaultBasePath, client: Call.
      * GET /access/acl
      * Get ACL entries, can be filter by path
      * Get ACL entries, can be filter by path.  Permissions: Returns all ACLs if a user has sufficient privileges on this endpoint. Otherwise it is limited to the user&#39;s API tokens. However, if &#x60;all-for-authid&#x60; is specified, all ACLs of the current Authid will be returned, whether the Authid has privileges to list other ACLs here or not.
-     * @param allForAuthid Whether to return all ACL entries for the exact current authid only. All ACL entries will appear as &#x60;AclUgidType::User&#x60; ACLs, regardles of whether they are stored as user or group entries. Hence, when using this parameter this endpoint cannot be used to retrieve information for updating the ACL tree directly. (optional, default to 0)
-     * @param exact If set, returns only ACL for the exact path. (optional, default to 0)
+     * @param allForAuthid Whether to return all ACL entries for the exact current authid only. All ACL entries will appear as &#x60;AclUgidType::User&#x60; ACLs, regardles of whether they are stored as user or group entries. Hence, when using this parameter this endpoint cannot be used to retrieve information for updating the ACL tree directly. (optional, default to false)
+     * @param exact If set, returns only ACL for the exact path. (optional, default to false)
      * @param path Access control path. (optional)
      * @return AccessAclGetAclResponse
      * @throws IllegalStateException If the request is not correctly configured
@@ -72,7 +72,7 @@ open class AccessAclApi(basePath: kotlin.String = defaultBasePath, client: Call.
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun accessAclGetAcl(allForAuthid: kotlin.Boolean? = 0, exact: kotlin.Boolean? = 0, path: kotlin.String? = null) : AccessAclGetAclResponse {
+    fun accessAclGetAcl(allForAuthid: kotlin.Boolean? = false, exact: kotlin.Boolean? = false, path: kotlin.String? = null) : AccessAclGetAclResponse {
         val localVarResponse = accessAclGetAclWithHttpInfo(allForAuthid = allForAuthid, exact = exact, path = path)
 
         return when (localVarResponse.responseType) {
@@ -94,8 +94,8 @@ open class AccessAclApi(basePath: kotlin.String = defaultBasePath, client: Call.
      * GET /access/acl
      * Get ACL entries, can be filter by path
      * Get ACL entries, can be filter by path.  Permissions: Returns all ACLs if a user has sufficient privileges on this endpoint. Otherwise it is limited to the user&#39;s API tokens. However, if &#x60;all-for-authid&#x60; is specified, all ACLs of the current Authid will be returned, whether the Authid has privileges to list other ACLs here or not.
-     * @param allForAuthid Whether to return all ACL entries for the exact current authid only. All ACL entries will appear as &#x60;AclUgidType::User&#x60; ACLs, regardles of whether they are stored as user or group entries. Hence, when using this parameter this endpoint cannot be used to retrieve information for updating the ACL tree directly. (optional, default to 0)
-     * @param exact If set, returns only ACL for the exact path. (optional, default to 0)
+     * @param allForAuthid Whether to return all ACL entries for the exact current authid only. All ACL entries will appear as &#x60;AclUgidType::User&#x60; ACLs, regardles of whether they are stored as user or group entries. Hence, when using this parameter this endpoint cannot be used to retrieve information for updating the ACL tree directly. (optional, default to false)
+     * @param exact If set, returns only ACL for the exact path. (optional, default to false)
      * @param path Access control path. (optional)
      * @return ApiResponse<AccessAclGetAclResponse?>
      * @throws IllegalStateException If the request is not correctly configured
@@ -114,8 +114,8 @@ open class AccessAclApi(basePath: kotlin.String = defaultBasePath, client: Call.
     /**
      * To obtain the request config of the operation accessAclGetAcl
      *
-     * @param allForAuthid Whether to return all ACL entries for the exact current authid only. All ACL entries will appear as &#x60;AclUgidType::User&#x60; ACLs, regardles of whether they are stored as user or group entries. Hence, when using this parameter this endpoint cannot be used to retrieve information for updating the ACL tree directly. (optional, default to 0)
-     * @param exact If set, returns only ACL for the exact path. (optional, default to 0)
+     * @param allForAuthid Whether to return all ACL entries for the exact current authid only. All ACL entries will appear as &#x60;AclUgidType::User&#x60; ACLs, regardles of whether they are stored as user or group entries. Hence, when using this parameter this endpoint cannot be used to retrieve information for updating the ACL tree directly. (optional, default to false)
+     * @param exact If set, returns only ACL for the exact path. (optional, default to false)
      * @param path Access control path. (optional)
      * @return RequestConfig
      */

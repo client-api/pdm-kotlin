@@ -61,10 +61,10 @@ open class RemotesTasksApi(basePath: kotlin.String = defaultBasePath, client: Ca
      * GET /remotes/tasks/list
      * Get the list of tasks for all remotes
      * Get the list of tasks for all remotes.  Permissions: Resource.Audit privileges on /resource/{remote} are needed to list tasks from a given remote.
-     * @param errors Only list erroneous tasks. (optional, default to 0)
+     * @param errors Only list erroneous tasks. (optional, default to false)
      * @param limit Only list this amount of tasks. (0 means no limit) (optional, default to 50L)
      * @param remote Remote ID. (optional)
-     * @param running Only list running tasks. (optional, default to 0)
+     * @param running Only list running tasks. (optional, default to false)
      * @param since Only list tasks since this UNIX epoch. (optional)
      * @param start List tasks beginning from this offset. (optional, default to 0L)
      * @param statusfilter Only list tasks which have any one of the listed status. (optional)
@@ -81,7 +81,7 @@ open class RemotesTasksApi(basePath: kotlin.String = defaultBasePath, client: Ca
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun remotesTasksGetList(errors: kotlin.Boolean? = 0, limit: kotlin.Long? = 50L, remote: kotlin.String? = null, running: kotlin.Boolean? = 0, since: kotlin.Long? = null, start: kotlin.Long? = 0L, statusfilter: kotlin.collections.List<PdmStatusfilterEnum>? = null, typefilter: kotlin.String? = null, until: kotlin.Long? = null, userfilter: kotlin.String? = null, view: kotlin.String? = null) : RemotesTasksGetListResponse {
+    fun remotesTasksGetList(errors: kotlin.Boolean? = false, limit: kotlin.Long? = 50L, remote: kotlin.String? = null, running: kotlin.Boolean? = false, since: kotlin.Long? = null, start: kotlin.Long? = 0L, statusfilter: kotlin.collections.List<PdmStatusfilterEnum>? = null, typefilter: kotlin.String? = null, until: kotlin.Long? = null, userfilter: kotlin.String? = null, view: kotlin.String? = null) : RemotesTasksGetListResponse {
         val localVarResponse = remotesTasksGetListWithHttpInfo(errors = errors, limit = limit, remote = remote, running = running, since = since, start = start, statusfilter = statusfilter, typefilter = typefilter, until = until, userfilter = userfilter, view = view)
 
         return when (localVarResponse.responseType) {
@@ -103,10 +103,10 @@ open class RemotesTasksApi(basePath: kotlin.String = defaultBasePath, client: Ca
      * GET /remotes/tasks/list
      * Get the list of tasks for all remotes
      * Get the list of tasks for all remotes.  Permissions: Resource.Audit privileges on /resource/{remote} are needed to list tasks from a given remote.
-     * @param errors Only list erroneous tasks. (optional, default to 0)
+     * @param errors Only list erroneous tasks. (optional, default to false)
      * @param limit Only list this amount of tasks. (0 means no limit) (optional, default to 50L)
      * @param remote Remote ID. (optional)
-     * @param running Only list running tasks. (optional, default to 0)
+     * @param running Only list running tasks. (optional, default to false)
      * @param since Only list tasks since this UNIX epoch. (optional)
      * @param start List tasks beginning from this offset. (optional, default to 0L)
      * @param statusfilter Only list tasks which have any one of the listed status. (optional)
@@ -131,10 +131,10 @@ open class RemotesTasksApi(basePath: kotlin.String = defaultBasePath, client: Ca
     /**
      * To obtain the request config of the operation remotesTasksGetList
      *
-     * @param errors Only list erroneous tasks. (optional, default to 0)
+     * @param errors Only list erroneous tasks. (optional, default to false)
      * @param limit Only list this amount of tasks. (0 means no limit) (optional, default to 50L)
      * @param remote Remote ID. (optional)
-     * @param running Only list running tasks. (optional, default to 0)
+     * @param running Only list running tasks. (optional, default to false)
      * @param since Only list tasks since this UNIX epoch. (optional)
      * @param start List tasks beginning from this offset. (optional, default to 0L)
      * @param statusfilter Only list tasks which have any one of the listed status. (optional)
@@ -199,10 +199,10 @@ open class RemotesTasksApi(basePath: kotlin.String = defaultBasePath, client: Ca
      * GET /remotes/tasks/statistics
      * Get task statistics for the specified filters
      * Get task statistics for the specified filters.  Permissions: Resource.Audit privileges on /resource/{remote} are needed to list tasks from a given remote.
-     * @param errors Only list erroneous tasks. (optional, default to 0)
+     * @param errors Only list erroneous tasks. (optional, default to false)
      * @param limit Only list this amount of tasks. (0 means no limit) (optional, default to 50L)
      * @param remote Remote ID. (optional)
-     * @param running Only list running tasks. (optional, default to 0)
+     * @param running Only list running tasks. (optional, default to false)
      * @param since Only list tasks since this UNIX epoch. (optional)
      * @param start List tasks beginning from this offset. (optional, default to 0L)
      * @param statusfilter Only list tasks which have any one of the listed status. (optional)
@@ -219,7 +219,7 @@ open class RemotesTasksApi(basePath: kotlin.String = defaultBasePath, client: Ca
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun remotesTasksGetStatistics(errors: kotlin.Boolean? = 0, limit: kotlin.Long? = 50L, remote: kotlin.String? = null, running: kotlin.Boolean? = 0, since: kotlin.Long? = null, start: kotlin.Long? = 0L, statusfilter: kotlin.collections.List<PdmStatusfilterEnum>? = null, typefilter: kotlin.String? = null, until: kotlin.Long? = null, userfilter: kotlin.String? = null, view: kotlin.String? = null) : RemotesTasksGetStatisticsResponse {
+    fun remotesTasksGetStatistics(errors: kotlin.Boolean? = false, limit: kotlin.Long? = 50L, remote: kotlin.String? = null, running: kotlin.Boolean? = false, since: kotlin.Long? = null, start: kotlin.Long? = 0L, statusfilter: kotlin.collections.List<PdmStatusfilterEnum>? = null, typefilter: kotlin.String? = null, until: kotlin.Long? = null, userfilter: kotlin.String? = null, view: kotlin.String? = null) : RemotesTasksGetStatisticsResponse {
         val localVarResponse = remotesTasksGetStatisticsWithHttpInfo(errors = errors, limit = limit, remote = remote, running = running, since = since, start = start, statusfilter = statusfilter, typefilter = typefilter, until = until, userfilter = userfilter, view = view)
 
         return when (localVarResponse.responseType) {
@@ -241,10 +241,10 @@ open class RemotesTasksApi(basePath: kotlin.String = defaultBasePath, client: Ca
      * GET /remotes/tasks/statistics
      * Get task statistics for the specified filters
      * Get task statistics for the specified filters.  Permissions: Resource.Audit privileges on /resource/{remote} are needed to list tasks from a given remote.
-     * @param errors Only list erroneous tasks. (optional, default to 0)
+     * @param errors Only list erroneous tasks. (optional, default to false)
      * @param limit Only list this amount of tasks. (0 means no limit) (optional, default to 50L)
      * @param remote Remote ID. (optional)
-     * @param running Only list running tasks. (optional, default to 0)
+     * @param running Only list running tasks. (optional, default to false)
      * @param since Only list tasks since this UNIX epoch. (optional)
      * @param start List tasks beginning from this offset. (optional, default to 0L)
      * @param statusfilter Only list tasks which have any one of the listed status. (optional)
@@ -269,10 +269,10 @@ open class RemotesTasksApi(basePath: kotlin.String = defaultBasePath, client: Ca
     /**
      * To obtain the request config of the operation remotesTasksGetStatistics
      *
-     * @param errors Only list erroneous tasks. (optional, default to 0)
+     * @param errors Only list erroneous tasks. (optional, default to false)
      * @param limit Only list this amount of tasks. (0 means no limit) (optional, default to 50L)
      * @param remote Remote ID. (optional)
-     * @param running Only list running tasks. (optional, default to 0)
+     * @param running Only list running tasks. (optional, default to false)
      * @param since Only list tasks since this UNIX epoch. (optional)
      * @param start List tasks beginning from this offset. (optional, default to 0L)
      * @param statusfilter Only list tasks which have any one of the listed status. (optional)

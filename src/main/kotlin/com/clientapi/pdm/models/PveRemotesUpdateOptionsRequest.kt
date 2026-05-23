@@ -56,7 +56,7 @@ data class PveRemotesUpdateOptionsRequest (
 
     /* Enable ebtables rules cluster wide. */
     @Json(name = "ebtables")
-    val ebtables: kotlin.Boolean? = 1,
+    val ebtables: kotlin.Boolean? = true,
 
     /* Enable or disable the firewall cluster wide. */
     @Json(name = "enable")
