@@ -3,7 +3,7 @@
 // Run with:
 //
 //   PDM_HOST=https://pdm.example.com:8443 \
-//   PDM_TOKEN='PDMAPIToken=root@pam!auto=...' \
+//   PDM_TOKEN='PDMAPIToken=root@pam!auto:...' \
 //   ./gradlew run -PmainClass=examples.ListNodesKt
 //
 // Or compile + run with kotlin CLI directly.

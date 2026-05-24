@@ -32,7 +32,7 @@ repositories {
 }
 
 dependencies {
-    implementation("com.clientapi:pdm:2026.5.23")
+    implementation("com.clientapi:pdm:2026.5.24")
 }
 ```
 
@@ -50,7 +50,7 @@ import com.clientapi.pdm.Pve
 import com.clientapi.pdm.infrastructure.ApiClient
 
 // Configure the shared OkHttp + auth headers (set once, reused everywhere).
-ApiClient.apiKey["Authorization"] = "PDMAPIToken=user@realm!tokenid=uuid-secret"
+ApiClient.apiKey["Authorization"] = "PDMAPIToken=user@realm!tokenid:uuid-secret"
 
 val pdm = Pve(basePath = "https://pdm1.example.com:8443/api2/json")
 
